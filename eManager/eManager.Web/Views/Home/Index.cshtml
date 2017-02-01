@@ -1,5 +1,16 @@
-﻿@{
-    ViewBag.Title = "eManager Applicaiton Page";
+﻿
+@model IEnumerable<eManager.Domain.Department>
+
+@{
+    ViewBag.Title = "All Departments";
 }
 
-<h1>Department Manager</h1>
+
+<h1>@ViewBag.Title</h1>
+
+<ul>
+    @foreach (var department in Model)
+    {
+        <li>@department.Name</li>
+    }
+</ul>
